@@ -28,7 +28,7 @@ function App() {
     <main className="relative isolate min-h-screen overflow-hidden bg-slate-950 px-4 py-12 text-slate-200 sm:px-6 sm:py-16">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.16),transparent_65%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-112 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.16),transparent_65%)]"
       />
       <div className="mx-auto w-full max-w-2xl">
         <header className="mb-10 text-center sm:mb-12">
@@ -49,8 +49,12 @@ function App() {
               />
             </svg>
           </div>
-          <p className="mb-2 text-sm font-medium tracking-[0.2em] text-indigo-300 uppercase">A calmer kind of productivity</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl">Make room for what matters.</h1>
+          <p className="mb-2 text-sm font-medium tracking-[0.2em] text-indigo-300 uppercase">
+            A calmer kind of productivity
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl">
+            Make room for what matters.
+          </h1>
           <p className="mx-auto mt-4 max-w-md text-base leading-7 text-slate-400">
             Keep your next steps in one place, and take them one at a time.
           </p>

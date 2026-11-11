@@ -20,7 +20,7 @@ function TodoItem({ todo, onDelete, onToggle }: TodoItemProps) {
       />
       <label
         htmlFor={checkboxId}
-        className={`min-w-0 flex-1 cursor-pointer break-words text-sm leading-6 transition ${
+        className={`min-w-0 flex-1 cursor-pointer wrap-break-word text-sm leading-6 transition ${
           todo.completed ? "text-slate-500 line-through" : "text-slate-200"
         }`}
       >
@@ -33,7 +33,12 @@ function TodoItem({ todo, onDelete, onToggle }: TodoItemProps) {
       >
         <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" className="size-4">
           <path d="m6 6 8 8m0-8-8 8" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
-          <path d="M3.5 5.5h13M8 5.5v-2h4v2m-6.5 0 .7 11h7.6l.7-11" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.4" />
+          <path
+            d="M3.5 5.5h13M8 5.5v-2h4v2m-6.5 0 .7 11h7.6l.7-11"
+            stroke="currentColor"
+            strokeLinejoin="round"
+            strokeWidth="1.4"
+          />
         </svg>
       </button>
     </div>
