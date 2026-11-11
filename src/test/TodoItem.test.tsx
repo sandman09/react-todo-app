@@ -20,8 +20,10 @@ describe("Testing TodoItem", () => {
 
     await user.click(screen.getByRole("checkbox"));
 
-    expect(onToggle).toHaveBeenCalledTimes(1);
-    expect(onToggle).toHaveBeenCalledWith(todo.id);
+    /*  expect(onToggle).toHaveBeenCalledTimes(1);
+    expect(onToggle).toHaveBeenCalledWith(todo.id); */
+
+    expect(screen.getByRole("checkbox", { name: todo.title })).toBeChecked();
   });
 
   it("calls onToggle with the todo id when the checkbox is clicked", async () => {
