@@ -1,17 +1,16 @@
-import { useContext, type Dispatch } from "react";
-import { type Todo } from "@/types/todo";
-import type { TodosAction } from "@/state/TodosReducer";
+import { useContext } from "react";
+import { TodosDispatchContext, TodoStateContext } from "@/state/TodosContext";
 
-export function useTodosState(context: React.Context<Todo>) {
-  const value = useContext(context);
+export function useTodosState() {
+  const value = useContext(TodoStateContext);
   if (value === null) {
     throw new Error("useTodosState must be used inside <TodosProvider>");
   }
   return value;
 }
 
-export function useTodosDispatch(context: React.Context<Dispatch<TodosAction>>) {
-  const value = useContext(context);
+export function useTodosDispatch() {
+  const value = useContext(TodosDispatchContext);
   if (value === null) {
     throw new Error("useTodosDispatch must be used inside <TodosProvider>");
   }
