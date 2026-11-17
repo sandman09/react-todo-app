@@ -6,6 +6,7 @@ import AddTodoForm from "./components/AddTodoForm";
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
+  //const todos = useTodosState(TodoStateContext);
 
   const onAdd = (title: string) => {
     const newTodo: Todo = {

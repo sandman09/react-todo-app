@@ -8,7 +8,7 @@ export type TodosAction =
   | { type: "toggled"; id: string }
   | { type: "deleted"; id: string };
 
-export const todosReducer = (state: TodosState, action: TodosAction): TodosState => {
+export const TodosReducer = (state: TodosState, action: TodosAction): TodosState => {
   switch (action.type) {
     case "added":
       return [...state, action.todo];
