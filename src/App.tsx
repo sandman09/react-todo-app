@@ -1,12 +1,7 @@
 import "./App.css";
-import TodoList from "./components/TodoList";
-import AddTodoForm from "./components/AddTodoForm";
-import { useTodosDispatch, useTodosState } from "./hooks/useTodos";
+import TodoSection from "./components/TodoSection";
 
 function App() {
-  const todos = useTodosState();
-  const dispatch = useTodosDispatch();
-
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-slate-950 px-4 py-12 text-slate-200 sm:px-6 sm:py-16">
       <div
@@ -47,16 +42,7 @@ function App() {
           aria-label="Todo list"
           className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5 shadow-2xl shadow-black/30 backdrop-blur sm:p-8"
         >
-          <AddTodoForm
-            onAdd={(title) =>
-              dispatch({ type: "added", todo: { id: crypto.randomUUID(), completed: false, title: title } })
-            }
-          />
-          <TodoList
-            todos={todos}
-            onDelete={(id) => dispatch({ type: "deleted", id: id })}
-            onToggle={(id) => dispatch({ type: "toggled", id: id })}
-          />
+          <TodoSection />
         </section>
 
         <p className="mt-6 text-center text-xs text-slate-500">Small steps add up. You’ve got this.</p>

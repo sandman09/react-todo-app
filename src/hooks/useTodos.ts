@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TodoStateContext, TodosDispatchContext } from "@/state/todosContext.ts";
+import { TodoStateContext, TodoDispatchContext } from "@/state/todosContext.ts";
 
 export function useTodosState() {
   const value = useContext(TodoStateContext);
@@ -10,7 +10,7 @@ export function useTodosState() {
 }
 
 export function useTodosDispatch() {
-  const value = useContext(TodosDispatchContext);
+  const value = useContext(TodoDispatchContext);
   if (value === null) {
     throw new Error("useTodosDispatch must be used inside <TodosProvider>");
   }
