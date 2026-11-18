@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import TodoItem from "../components/TodoItem";
+import TodoItem from "./components/TodoItem";
 
 describe("Testing TodoItem", () => {
   const todo = { id: "todo-1", title: "Test todo", completed: false };
@@ -19,10 +19,6 @@ describe("Testing TodoItem", () => {
     render(<TodoItem todo={{ ...todo, completed: true }} onToggle={onToggle} onDelete={vi.fn()} />);
 
     await user.click(screen.getByRole("checkbox"));
-
-    /*  expect(onToggle).toHaveBeenCalledTimes(1);
-    expect(onToggle).toHaveBeenCalledWith(todo.id); */
-
     expect(screen.getByRole("checkbox", { name: todo.title })).toBeChecked();
   });
 

@@ -29,7 +29,7 @@ function TodoItem({ todo, onDelete, onToggle }: TodoItemProps) {
       <button
         className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-slate-500 transition hover:bg-rose-400/10 hover:text-rose-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-300"
         onClick={() => onDelete(todo.id)}
-        aria-label="Delete"
+        aria-label={`Delete ${todo.title}`}
       >
         <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" className="size-4">
           <path d="m6 6 8 8m0-8-8 8" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />

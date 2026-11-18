@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import TodoList from "../components/TodoList";
+import TodoList from "./components/TodoList";
 
 describe("TodoList", () => {
   it("renders one list item per todo", () => {

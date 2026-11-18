@@ -1,29 +1,7 @@
 import "./App.css";
-import { useState } from "react";
-import { type Todo } from "./types/todo";
-import TodoList from "./components/TodoList";
-import AddTodoForm from "./components/AddTodoForm";
+import TodoSection from "./features/Todo/components/TodoSection";
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
-
-  const onAdd = (title: string) => {
-    const newTodo: Todo = {
-      id: crypto.randomUUID(),
-      title: title,
-      completed: false,
-    };
-
-    setTodos((prev) => [...prev, newTodo]);
-  };
-
-  const onToggle = (id: string) => {
-    setTodos((prev) => prev.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)));
-  };
-  const onDelete = (id: string) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  };
-
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-slate-950 px-4 py-12 text-slate-200 sm:px-6 sm:py-16">
       <div
@@ -64,8 +42,7 @@ function App() {
           aria-label="Todo list"
           className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5 shadow-2xl shadow-black/30 backdrop-blur sm:p-8"
         >
-          <AddTodoForm onAdd={onAdd} />
-          <TodoList todos={todos} onDelete={onDelete} onToggle={onToggle} />
+          <TodoSection />
         </section>
 
         <p className="mt-6 text-center text-xs text-slate-500">Small steps add up. You’ve got this.</p>

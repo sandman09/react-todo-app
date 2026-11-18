@@ -1,12 +1,13 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import userEvent from "@testing-library/user-event";
+import renderWithProviders from "@/test-utils";
 import App from "@/App";
 
 describe("App.tsx test suite", () => {
   const setup = () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithProviders(<App />);
 
     const input = screen.getByRole("textbox");
     const button = screen.getByRole("button", { name: /add/i });
