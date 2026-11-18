@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TodoStateContext, TodoDispatchContext } from "@/state/todosContext.ts";
+import { TodoStateContext, TodoDispatchContext } from "@/features/Todo/state/todosContext";
 
 export function useTodosState() {
   const value = useContext(TodoStateContext);

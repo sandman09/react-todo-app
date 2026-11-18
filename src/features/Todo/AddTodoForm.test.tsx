@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, vi, expect } from "vitest";
 import userEvent from "@testing-library/user-event";
-import AddTodoForm from "@/components/AddTodoForm";
+import AddTodoForm from "@/features/Todo/components/AddTodoForm";
 
 describe("Testing Todo adding form", () => {
   const setup = () => {

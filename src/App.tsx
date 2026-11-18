@@ -1,5 +1,5 @@
 import "./App.css";
-import TodoSection from "./components/TodoSection";
+import TodoSection from "./features/Todo/components/TodoSection";
 
 function App() {
   return (

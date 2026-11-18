@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { todosReducer as todosReducer, type TodosState } from "@/state/todosReducer";
+import { todosReducer as todosReducer, type TodosState } from "@/features/Todo/state/todosReducer";
 
 describe("todosReducer", () => {
   const firstTodo = { id: "1", title: "First todo", completed: false };

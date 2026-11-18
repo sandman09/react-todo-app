@@ -1,4 +1,4 @@
-import { useTodosDispatch, useTodosState } from "@/hooks/useTodos";
+import { useTodosDispatch, useTodosState } from "@/features/Todo/hooks/useTodos";
 import AddTodoForm from "./AddTodoForm";
 import TodoList from "./TodoList";
 
